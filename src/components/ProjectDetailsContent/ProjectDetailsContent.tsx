@@ -3,6 +3,7 @@
 import Carrousel from "@/components/Carrousel/Carrousel";
 import { Icons } from "@/constants/Icons";
 import {
+  DblImages,
   DogImages,
   GvImages,
   MedImages,
@@ -19,7 +20,8 @@ type ProjectTitles =
   | "Sipolatti Vendedor"
   | "Dog Plan"
   | "MedSempre"
-  | "Vapt";
+  | "Vapt"
+  | "DBL - Precificação e Orçamentos";
 
 export default function ProjectDetailsContent() {
   const searchParams = useSearchParams();
@@ -33,6 +35,7 @@ export default function ProjectDetailsContent() {
     "Dog Plan": DogImages,
     MedSempre: MedImages,
     Vapt: VaptImages,
+    "DBL - Precificação e Orçamentos": DblImages,
   };
 
   const returnPlayStore: Record<ProjectTitles, string> = {

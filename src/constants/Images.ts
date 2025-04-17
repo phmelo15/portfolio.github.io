@@ -30,4 +30,8 @@ export const Images = {
   VaptPod: require("../assets/images/VaptPod.jpeg"),
   VaptTwo: require("../assets/images/VaptTwo.jpeg"),
   VapThree: require("../assets/images/VaptThree.jpeg"),
+  dblPreLogin: require("../assets/images/dblPreLogin.jpeg"),
+  dblLogin: require("../assets/images/dblLogin.jpeg"),
+  dblHome: require("../assets/images/dblHome.jpeg"),
+  dblCalc: require("../assets/images/dblCalc.jpeg"),
 };

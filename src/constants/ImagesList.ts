@@ -34,3 +34,10 @@ export const VaptImages = [
   Images.VaptTwo,
   Images.VapThree,
 ];
+
+export const DblImages = [
+  Images.dblPreLogin,
+  Images.dblLogin,
+  Images.dblHome,
+  Images.dblCalc,
+];

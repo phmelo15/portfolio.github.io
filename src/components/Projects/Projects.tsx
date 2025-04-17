@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  DblImages,
   DogImages,
   GvImages,
   MedImages,
@@ -32,9 +33,11 @@ export default function Projects() {
       </text>
       <div className="flex flex-col lg:flex-row w-[44%] gap-[12px] my-[30px] items-center justify-center">
         <CarrouselCard
-          name="Dog Plan"
-          imagesArray={DogImages}
-          projectDetailsText={ProjectDetailsText.DogPlan}
+          name="DBL - Precificação e Orçamentos"
+          imagesArray={DblImages}
+          projectDetailsText={
+            ProjectDetailsText["DBL - Precificação e Orçamentos"]
+          }
         />
         <CarrouselCard
           name="Sipolatti Vendedor"
@@ -66,6 +69,13 @@ export default function Projects() {
               name="Prático RT"
               imagesArray={praticoImages}
               projectDetailsText={ProjectDetailsText.PraticoRT}
+            />
+          </div>
+          <div className="flex flex-col lg:flex-row w-[44%] gap-[12px] mb-[30px] items-center justify-center">
+            <CarrouselCard
+              name="Dog Plan"
+              imagesArray={DogImages}
+              projectDetailsText={ProjectDetailsText.DogPlan}
             />
           </div>
         </>
