@@ -38,9 +38,10 @@ jobs:
       - name: Export static site
         run: yarn next export
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload artifact (plano B)
+        uses: actions/upload-artifact@v2
         with:
+          name: github-pages
           path: out
 
   deploy:
