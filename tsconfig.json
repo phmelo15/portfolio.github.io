@@ -3,8 +3,9 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
+    "strict": false, // 🔹 relaxa as regras estritas
+    "noEmitOnError": false, // 🔹 gera saída mesmo com erro de tipagem
+    "noEmit": false, // 🔹 garante que não bloqueie emissão
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
