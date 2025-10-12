@@ -38,7 +38,8 @@ export default function ProjectDetailsContent() {
     "DBL - Precificação e Orçamentos": DblImages,
   };
 
-  const returnPlayStore: Record<ProjectTitles, string> = {
+  // 🔹 Usando Partial<Record<...>> para não ser obrigado a definir todas as chaves
+  const returnPlayStore: Partial<Record<ProjectTitles, string>> = {
     "Prático RT":
       "https://play.google.com/store/apps/details?id=com.pratico.rt",
     "Cidadania GV":
@@ -50,7 +51,7 @@ export default function ProjectDetailsContent() {
     Vapt: "https://play.google.com/store/apps/details?id=br.com.globalsys.vapt",
   };
 
-  const returnAppStore: Record<ProjectTitles, string> = {
+  const returnAppStore: Partial<Record<ProjectTitles, string>> = {
     "Prático RT": "https://apps.apple.com/br/app/praticort/id6449002879",
     "Cidadania GV":
       "https://apps.apple.com/br/app/mnr-m%C3%A3o-na-roda/id6475684125",
@@ -64,33 +65,39 @@ export default function ProjectDetailsContent() {
   return (
     <div className="flex flex-col min-h-screen px-[50px] pt-[150px]">
       <h1 className="text-[18px] text-white">{title}</h1>
-      <a
-        href={returnPlayStore[title]}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <button className="">
-          <Image
-            src={Icons.playStore}
-            alt="my photo"
-            className={"w-[150px]"}
-            onClick={() => null}
-          />
-        </button>
-      </a>
-      <a href={returnAppStore[title]} target="_blank" rel="noopener noreferrer">
-        <button className="">
-          <Image
-            src={Icons.appStore}
-            alt="my photo"
-            className={"w-[150px]"}
-            onClick={() => null}
-          />
-        </button>
-      </a>
+
+      {returnPlayStore[title] && (
+        <a
+          href={returnPlayStore[title]}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button>
+            <Image
+              src={Icons.playStore}
+              alt="Play Store"
+              className="w-[150px]"
+            />
+          </button>
+        </a>
+      )}
+
+      {returnAppStore[title] && (
+        <a
+          href={returnAppStore[title]}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button>
+            <Image src={Icons.appStore} alt="App Store" className="w-[150px]" />
+          </button>
+        </a>
+      )}
+
       <p className="text-[14px] my-[40px] mb-[80px] text-white">
         {projectDesc}
       </p>
+
       <div className="mb-[100px]">
         {title && returnImage[title] ? (
           <Carrousel imagesArray={returnImage[title]} />
