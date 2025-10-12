@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 
 interface ICarrousel {
-  imagesArray: string[];
+  imagesArray: (string | StaticImageData)[];
 }
 
 const Carousel = ({ imagesArray }: ICarrousel) => {
