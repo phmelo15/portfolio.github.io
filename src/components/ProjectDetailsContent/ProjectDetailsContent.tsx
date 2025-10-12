@@ -11,7 +11,7 @@ import {
   VaptImages,
   praticoImages,
 } from "@/constants/ImagesList";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useSearchParams } from "next/navigation";
 
 type ProjectTitles =
@@ -28,7 +28,7 @@ export default function ProjectDetailsContent() {
   const title = searchParams.get("title") as ProjectTitles;
   const projectDesc = searchParams.get("projectDesc");
 
-  const returnImage: Record<ProjectTitles, string[]> = {
+  const returnImage: Record<ProjectTitles, StaticImageData[]> = {
     "Prático RT": praticoImages,
     "Cidadania GV": GvImages,
     "Sipolatti Vendedor": SipoImages,
