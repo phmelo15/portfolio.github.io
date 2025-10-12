@@ -12,6 +12,8 @@ export default function Experience() {
       <div className={styles.ContainerExperience}>
         <div className={styles.Logo}>
           <Image
+            width={38}
+            height={38}
             src={Images.GlobalLogo}
             alt="my photo"
             className={"w-[38px] rounded"}
@@ -27,6 +29,8 @@ export default function Experience() {
       <div className={styles.ContainerExperience}>
         <div className={styles.Logo}>
           <Image
+            width={38}
+            height={38}
             src={Images.GlobalLogo}
             alt="my photo"
             className={"w-[38px] rounded"}
@@ -42,6 +46,8 @@ export default function Experience() {
       <div className={styles.ContainerExperience}>
         <div className={styles.Logo}>
           <Image
+            width={38}
+            height={38}
             src={Images.GlobalLogo}
             alt="my photo"
             className={"w-[38px] rounded"}
